@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>222</title>
+	<script src="jquery-1.12.2.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			$("#headquarter").click(function() {
+				var tmp = $(this).prop("checked");
+				$("tbody").find(":checkbox").prop("checked", tmp);
+			});
+
+			$("tbody").find(":checkbox").click(function() {
+				var length1 = $("tbody").find(":checkbox").length;
+				var length2 = $("tbody").find(":checked").length;
+				if (length1 == length2) {
+					$("#headquarter").prop("checked", true);
+				} else {
+					$("#headquarter").prop("checked", false);
+				}
+			})
+		})
+	</script>
+</head>
+<body>
+	<table>
+		<thead>
+			<tr>
+				<th><input type="checkbox" id="headquarter"></th>
+				<th>Area</th>
+				<th>Place</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><input type="checkbox" name=""></td>
+				<td>henan</td>
+				<td>lonngmenshiku</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name=""></td>
+				<td>jiangxi</td>
+				<td>jingdezhen</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name=""></td>
+				<td>jiangsu</td>
+				<td>suzhouyuanlin</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
